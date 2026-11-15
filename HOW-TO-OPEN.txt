@@ -1,0 +1,21 @@
+Tera Twin — How to open
+=======================
+
+EASIEST WAY (no install)
+1. Extract/unzip this folder.
+2. Double-click: tera-twin.html
+3. It opens in your browser and works offline.
+   Tip: use Chrome, Edge, Firefox, or Safari.
+
+If you want to edit/run the source code
+1. Install Node.js LTS from https://nodejs.org
+2. Open a terminal in the "source" folder.
+3. Run:
+   npm install
+   npm run dev
+4. Open: http://localhost:5173
+
+Notes
+- Do NOT open source/index.html directly; it is a development entry file.
+- Use tera-twin.html for the ready-to-use website.
+- Dark/Light button is in the top bar.

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050813" />
+    <meta name="color-scheme" content="dark light" />
+    <title>Tera Twin — Earth & Planetary Analog Explorer</title>
+    <script>
+      (function () {
+        try {
+          var params = new URLSearchParams(window.location.search);
+          var urlTheme = params.get("theme");
+          var saved = window.localStorage.getItem("tera-twin-theme");
+          var theme = urlTheme === "light" || urlTheme === "dark" ? urlTheme : saved === "light" || saved === "dark" ? saved : "dark";
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        } catch (e) { document.documentElement.dataset.theme = "dark"; }
+      })();
+    </script>
+    <meta name="description" content="Compare Earth, Mars and the Moon, find geographical twins, and plan mission analog sites with Tera Twin." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%230b1226'/%3E%3Ccircle cx='32' cy='32' r='18' fill='%234aa3ff'/%3E%3Cellipse cx='32' cy='32' rx='28' ry='10' fill='none' stroke='%23c4def2' stroke-width='3'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/app.tsx"></script>
+  </body>
+</html>
